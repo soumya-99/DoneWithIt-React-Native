@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 
 import ViewImageScreen from "./app/screens/ViewImageScreen";
@@ -16,7 +17,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>I Love React Native!</AppText>
+      <MaterialCommunityIcons name="email" size={200} color="dodgerblue" />
     </View>
   );
 }
