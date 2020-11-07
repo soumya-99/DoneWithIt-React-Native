@@ -6,15 +6,23 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View
-        style={{
-          height: 100,
-          width: 100,
-          backgroundColor: "dodgerblue",
-          elevation: 20
-        }}
-      ></View>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text style={{
+        fontSize: 30,
+        // fontFamily: "Roboto"
+        fontStyle: "italic",
+        fontWeight: "bold",
+        color: "red",
+        textTransform: "uppercase",
+        textAlign: "center",
+        lineHeight: 60
+      }}>I Love React Native! This is my first React Native App. Here's some more Text...</Text>
     </View>
   );
 }
