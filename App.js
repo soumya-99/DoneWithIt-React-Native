@@ -12,26 +12,9 @@ export default function App() {
           height: 100,
           width: 100,
           backgroundColor: "dodgerblue",
-          padding: 20,
-          paddingLeft: 30,
+          elevation: 20
         }}
-      >
-        <View
-          style={{
-            height: 50,
-            width: 50,
-            backgroundColor: "gold",
-          }}
-        ></View>
-      </View>
-      <View style={{
-        height: 100,
-        width: 100,
-        backgroundColor: "orange",
-        margin: 20
-      }}>
-
-      </View>
+      ></View>
     </View>
   );
 }
