@@ -8,8 +8,30 @@ export default function App() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View
-        style={{ height: 100, width: 100, backgroundColor: "dodgerblue", borderWidth: 10, borderColor: "royalblue", borderRadius: 20, borderTopLeftRadius: 60 }}
-      ></View>
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: "dodgerblue",
+          padding: 20,
+          paddingLeft: 30,
+        }}
+      >
+        <View
+          style={{
+            height: 50,
+            width: 50,
+            backgroundColor: "gold",
+          }}
+        ></View>
+      </View>
+      <View style={{
+        height: 100,
+        width: 100,
+        backgroundColor: "orange",
+        margin: 20
+      }}>
+
+      </View>
     </View>
   );
 }
