@@ -22,12 +22,13 @@ const initialMessages = [
 ];
 
 const MessagesScreen = () => {
-  const [messages, setMessages] = useState(initialMessages)
-  const handleDelete = message => {
+  const [refresh, setRefresh] = useState(false);
+  const [messages, setMessages] = useState(initialMessages);
+  const handleDelete = (message) => {
     //delete message from, messages
-    setMessages(messages.filter(m => m.id !== message.id))
+    setMessages(messages.filter((m) => m.id !== message.id));
     // Call The server
-  }
+  };
   return (
     <Screen>
       <FlatList
@@ -45,6 +46,17 @@ const MessagesScreen = () => {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refresh}
+        onRefresh={() =>
+          setMessages([
+            {
+              id: 2,
+              title: "T2",
+              description: "D2",
+              image: require("../assets/mosh.jpg"),
+            },
+          ])
+        }
       />
     </Screen>
   );
