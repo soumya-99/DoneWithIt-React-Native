@@ -35,9 +35,8 @@ const AppTextInput = ({
 							style={styles.icon}
 						/>
 					)}
-					<AppText style={styles.text}>
-						{selectedItem ? selectedItem.label : placeholder}
-					</AppText>
+					{selectedItem ? <AppText style={styles.text}>{selectedItem.label}</AppText> : <AppText style={styles.placeholder}>{placeholder}</AppText>}
+					
 					<MaterialCommunityIcons
 						name="chevron-down"
 						size={26}
@@ -84,4 +83,8 @@ const styles = StyleSheet.create({
 	text: {
 		flex: 1,
 	},
+	placeholder: {
+		color: defaultStyles.colors.mediumGrey,
+		flex: 1,
+	}
 });
