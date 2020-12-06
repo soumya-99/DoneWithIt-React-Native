@@ -22,6 +22,12 @@ const categories = [
 	{ label: "Furniture", value: 1, backgroundColor: "red", icon: "apps" },
 	{ label: "Clothing", value: 2, backgroundColor: "green", icon: "email" },
 	{ label: "Camera", value: 3, backgroundColor: "blue", icon: "lock" },
+	{ label: "Clothing", value: 4, backgroundColor: "green", icon: "email" },
+	{ label: "Camera", value: 5, backgroundColor: "teal", icon: "lock" },
+	{ label: "Camera", value: 6, backgroundColor: "violet", icon: "lock" },
+	{ label: "Camera", value: 7, backgroundColor: "forestgreen", icon: "lock" },
+	{ label: "Camera", value: 8, backgroundColor: "orange", icon: "lock" },
+	{ label: "Camera", value: 9, backgroundColor: "pink", icon: "lock" },
 ];
 
 function ListingEditScreen() {
