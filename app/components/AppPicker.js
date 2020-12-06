@@ -20,12 +20,13 @@ const AppTextInput = ({
 	items,
 	onSelectItem,
 	selectedItem,
+	width = "100%",
 }) => {
 	const [modalVisible, setModalVisible] = useState(false);
 	return (
 		<>
 			<TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-				<View style={styles.container}>
+				<View style={[styles.container, , { width }]}>
 					{icon && (
 						<MaterialCommunityIcons
 							name={icon}
@@ -34,8 +35,12 @@ const AppTextInput = ({
 							style={styles.icon}
 						/>
 					)}
-					{selectedItem ? <AppText style={styles.text}>{selectedItem.label}</AppText> : <AppText style={styles.placeholder}>{placeholder}</AppText>}
-					
+					{selectedItem ? (
+						<AppText style={styles.text}>{selectedItem.label}</AppText>
+					) : (
+						<AppText style={styles.placeholder}>{placeholder}</AppText>
+					)}
+
 					<MaterialCommunityIcons
 						name="chevron-down"
 						size={26}
@@ -72,7 +77,6 @@ const styles = StyleSheet.create({
 		backgroundColor: defaultStyles.colors.lightGrey,
 		borderRadius: 25,
 		flexDirection: "row",
-		width: "100%",
 		padding: 15,
 		marginVertical: 10,
 	},
@@ -85,5 +89,5 @@ const styles = StyleSheet.create({
 	placeholder: {
 		color: defaultStyles.colors.mediumGrey,
 		flex: 1,
-	}
+	},
 });
