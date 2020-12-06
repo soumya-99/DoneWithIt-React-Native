@@ -9,14 +9,14 @@ import Screen from "../components/Screen";
 const initialMessages = [
 	{
 		id: 1,
-		title: "T1",
-		description: "D1",
+		title: "The above is a Snack Player. It’s a handy tool created by Expo to embed and run React Native projects and share how they render in platforms like Android and iOS. The code is live and editable, so you can play directly with it in your browser. Go ahead and try changing the",
+		description: "The above is a Snack Player. It’s a handy tool created by Expo to embed and run React Native projects and share how they render in platforms like Android and iOS. The code is live and editable, so you can play directly with it in your browser. Go ahead and try changing the",
 		image: require("../assets/mosh.jpg"),
 	},
 	{
 		id: 2,
-		title: "T2",
-		description: "D2",
+		title: "The above is a Snack Player. It’s a handy tool created by Expo to embed and run React Native projects and share how they render in platforms like Android and iOS. The code is live and editable, so you can play directly with it in your browser. Go ahead and try changing the",
+		description: "The above is a Snack Player. It’s a handy tool created by Expo to embed and run React Native projects and share how they render in platforms like Android and iOS. The code is live and editable, so you can play directly with it in your browser. Go ahead and try changing the",
 		image: require("../assets/mosh.jpg"),
 	},
 ];
