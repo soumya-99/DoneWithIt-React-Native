@@ -10,6 +10,7 @@ function AppFormPicker({
 	placeholder,
 	width,
 	PickerItemComponent,
+	numberOfColumns,
 }) {
 	const { errors, setFieldValue, touched, values } = useFormikContext();
 
@@ -17,6 +18,7 @@ function AppFormPicker({
 		<>
 			<AppPicker
 				items={items}
+				numberOfColumns={numberOfColumns}
 				onSelectItem={(item) => setFieldValue(name, item)}
 				placeholder={placeholder}
 				selectedItem={values[name]}

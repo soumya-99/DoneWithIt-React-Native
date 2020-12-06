@@ -22,6 +22,7 @@ const AppTextInput = ({
 	selectedItem,
 	width = "100%",
 	PickerItemComponent = PickerItem,
+	numberOfColumns,
 }) => {
 	const [modalVisible, setModalVisible] = useState(false);
 	return (
@@ -55,8 +56,10 @@ const AppTextInput = ({
 					<FlatList
 						data={items}
 						keyExtractor={(item) => item.value.toString()}
+						numColumns={numberOfColumns}
 						renderItem={({ item }) => (
 							<PickerItemComponent
+								item={item}
 								label={item.label}
 								onPress={() => {
 									setModalVisible(false);
