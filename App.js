@@ -1,18 +1,13 @@
-import React, { useState } from "react";
-import { Text, TextInput, Switch } from "react-native";
+import React from "react";
 
-import AppTextInput from "./app/components/AppTextInput";
 import Screen from "./app/components/Screen";
-import AppPicker from "./app/components/AppPicker";
-import LoginScreen from "./app/screens/LoginScreen";
-import ListingEditScreen from "./app/screens/ListingEditScreen";
-
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
 
 	return (
 		<Screen>
-			<ListingEditScreen />
+			<WelcomeScreen />
 		</Screen>
 	);
 }

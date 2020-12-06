@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet, Image } from "react-native";
+
 import AppButton from "../components/AppButton";
-import colors from "../config/colors";
 
 export default function WelcomeScreen() {
   return (
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     padding: 20,
-    width: "100%",
+    width: "100%", //if we don't give this, the total buttonContainer shrinks to its original content (which is 'Login')
   },
   tagLine: {
     fontSize: 25,

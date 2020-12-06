@@ -14,7 +14,7 @@ const ViewImageScreen = () => {
         <MaterialCommunityIcons name="trash-can-outline" color="white" size={35} />
       </View>
       <Image
-        resizeMode="contain"
+        resizeMode="contain" //without this, the image is zoomed in and raise across all over the screen
         style={styles.image}
         source={require("../assets/chair.jpg")}
       />

@@ -2,8 +2,6 @@ import React from "react";
 import {
   Image,
   StyleSheet,
-  Text,
-  TouchableNativeFeedback,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -22,7 +20,7 @@ const ListItem = ({
 }) => {
   return (
     <Swipeable renderRightActions={renderRightActions}>
-      <TouchableNativeFeedback onPress={onPress}>
+      <TouchableOpacity onPress={onPress}>
         <View style={styles.container}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
@@ -31,7 +29,7 @@ const ListItem = ({
             {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
           </View>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableOpacity>
     </Swipeable>
   );
 };

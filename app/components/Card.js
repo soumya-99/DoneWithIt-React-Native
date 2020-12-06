@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
+
 import colors from "../config/colors";
 import AppText from "./AppText";
 
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: colors.white,
     marginBottom: 20,
-    overflow: "hidden"
+    overflow: "hidden", //to control the image overflow over the borderRadius of the card.
   },
   image: {
     width: "100%",

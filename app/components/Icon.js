@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Icon = ({
@@ -25,5 +25,3 @@ const Icon = ({
 };
 
 export default Icon;
-
-const styles = StyleSheet.create({});

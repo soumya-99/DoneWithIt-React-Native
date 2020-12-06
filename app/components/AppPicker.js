@@ -1,15 +1,14 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import {
 	StyleSheet,
-	Text,
 	View,
-	TextInput,
 	TouchableWithoutFeedback,
 	Modal,
 	Button,
 	FlatList,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
 import Screen from "./Screen";

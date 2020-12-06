@@ -6,7 +6,7 @@ import colors from "../config/colors";
 const AppButton = ({ title, onPress, color = "primary" }) => {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: colors[color] }]}
+      style={[styles.button, { backgroundColor: colors[color] }]} //colors[color] squareBracket Syntax is for accessing colors dynamically passed through AppButton's color prop. It's used in WelcomeScreen.js
       onPress={onPress}
     >
       <Text style={styles.text}>{title}</Text>
