@@ -1,39 +1,24 @@
 import React, { useState, useEffect } from "react";
-import * as ImagePicker from "expo-image-picker";
+import { Button, Image } from "react-native";
 
 import Screen from "./app/components/Screen";
-import { Button, Image } from "react-native";
-import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 export default function App() {
-	const [imageUri, setImageUri] = useState();
-	const requestPermission = async () => {
-		const { granted } = await ImagePicker.requestCameraRollPermissionsAsync();
-		if (!granted) {
-			alert("You need to enable access");
-		}
+	const [imageUris, setImageUris] = useState([]);
+	const handleAdd = (uri) => {
+		setImageUris([...imageUris, uri]);
 	};
-
-	useEffect(() => {
-		requestPermission();
-	}, []);
-
-	const selectImage = async () => {
-		try {
-			const result = await ImagePicker.launchImageLibraryAsync();
-			if (!result.cancelled) {
-				setImageUri(result.uri);
-			}
-		} catch (error) {
-			console.log("Error reading an image");
-		}
+	const handleRemove = (uri) => {
+		setImageUris(imageUris.filter((imageUri) => imageUri !== uri));
 	};
 
 	return (
 		<Screen>
-			<ImageInput
-				onChangeImage={(uri) => setImageUri(uri)}
-				imageUri={imageUri}
+			<ImageInputList
+				onAddImage={handleAdd}
+				imageUris={imageUris}
+				onRemoveImage={handleRemove}
 			/>
 		</Screen>
 	);
