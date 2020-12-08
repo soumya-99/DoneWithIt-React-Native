@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Button, Image } from "react-native";
+import React, { useState } from "react";
 
 import Screen from "./app/components/Screen";
 import ImageInputList from "./app/components/ImageInputList";

@@ -12,21 +12,21 @@ import * as ImagePicker from "expo-image-picker";
 import colors from "../config/colors";
 
 const ImageInput = ({ imageUri, onChangeImage }) => {
-	useEffect(() => {
-		requestPermission();
-	}, []);
-
 	const requestPermission = async () => {
 		const { granted } = await ImagePicker.requestCameraRollPermissionsAsync();
 		if (!granted) {
 			alert("You need to enable access");
 		}
 	};
+	useEffect(() => {
+		requestPermission();
+	}, []);
+
 	const handlePress = () => {
-		if (!imageUri) {
+		if (!imageUri) { //to upload image
 			selectImage();
-		} else {
-			Alert.alert("Delete", "Are you sure you want to delete this image", [
+		} else { //for deleting uploaded images
+			Alert.alert("Delete", "Are you sure you want to delete this image?", [
 				{
 					text: "Yes",
 					onPress: () => onChangeImage(null),
