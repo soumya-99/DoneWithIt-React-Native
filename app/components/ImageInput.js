@@ -23,9 +23,11 @@ const ImageInput = ({ imageUri, onChangeImage }) => {
 	}, []);
 
 	const handlePress = () => {
-		if (!imageUri) { //to upload image
+		if (!imageUri) {
+			//to upload image
 			selectImage();
-		} else { //for deleting uploaded images
+		} else {
+			//for deleting uploaded images
 			Alert.alert("Delete", "Are you sure you want to delete this image?", [
 				{
 					text: "Yes",

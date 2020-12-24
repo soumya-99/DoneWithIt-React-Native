@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, TouchableOpacity } from "react-native";
 
 import AppText from "./AppText";
 import Icon from "./Icon";
@@ -7,7 +7,13 @@ import Icon from "./Icon";
 const CatagoryPickerItem = ({ item, onPress }) => {
 	return (
 		<View style={styles.container}>
-			<Icon backgroundColor={item.backgroundColor} name={item.icon} size={80} />
+			<TouchableOpacity onPress={onPress}>
+				<Icon
+					backgroundColor={item.backgroundColor}
+					name={item.icon}
+					size={80}
+				/>
+			</TouchableOpacity>
 			<AppText style={styles.label}>{item.label}</AppText>
 		</View>
 	);
@@ -20,9 +26,9 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 25.5,
 		paddingVertical: 15,
 		alignItems: "center",
-    },
-    label: {
-        marginTop: 5,
-        textAlign: "center"
-    }
+	},
+	label: {
+		marginTop: 5,
+		textAlign: "center",
+	},
 });

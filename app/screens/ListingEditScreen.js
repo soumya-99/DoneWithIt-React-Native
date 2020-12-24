@@ -11,13 +11,14 @@ import {
 } from "../components/forms";
 import FormImagePicker from "../components/forms/FormImagePicker";
 import Screen from "../components/Screen";
+import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({
 	title: Yup.string().required().min(1).label("Title"),
 	price: Yup.number().required().min(1).max(10000).label("Price"),
 	description: Yup.string().label("Description"),
 	category: Yup.object().required().nullable().label("Category"),
-	images: Yup.array().required().min(1, "Please select atlease 1 image"),
+	images: Yup.array().min(1, "Please select atlease 1 image"),
 });
 
 const categories = [
@@ -33,6 +34,7 @@ const categories = [
 ];
 
 function ListingEditScreen() {
+	const location = useLocation();
 	return (
 		<Screen style={styles.container}>
 			<Form
@@ -43,7 +45,7 @@ function ListingEditScreen() {
 					category: null,
 					images: [],
 				}}
-				onSubmit={(values) => console.log(values)}
+				onSubmit={(values) => console.log(location)}
 				validationSchema={validationSchema}
 			>
 				<FormImagePicker name="images" />
