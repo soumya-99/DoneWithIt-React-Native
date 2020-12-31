@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Text } from "react-native";
 import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from "@react-navigation/native";
 
 import Screen from "./app/components/Screen";
 
-const Tweets = () => {
+const Tweets = () => (
 	<Screen>
 		<Text>Tweets</Text>
-	</Screen>;
-};
+	</Screen>
+)
 
-const TweetDetails = () => {
+const TweetDetails = () => (
 	<Screen>
 		<Text>Tweet Details</Text>
 	</Screen>
-}
+)
 
 const Stack = createStackNavigator();
 const StackNavigator = () => (
